@@ -1,4 +1,4 @@
-package main.java_8.funcinterface;
+package main.java_8.functional_interface;
 
 
 /* functional interface is an interface having only one abstract method */

@@ -1,4 +1,4 @@
-package main.java_8.staticmethod;
+package main.java_8.static_method;
 
 
 interface Parent{

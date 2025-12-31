@@ -1,4 +1,4 @@
-package main.java_8.defaultmethod;
+package main.java_8.default_method;
 /* in java-8 the interface can have default method and static method */
 /* in java-8 the interface can have private static method */
 /* default method can have body and it's not mandatory to override by child */
