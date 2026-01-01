@@ -57,6 +57,13 @@ class StreamFilter{
         System.out.println("Number of odd element present in the List is : "+count);
     }
 
+    /* Number of Even and divided by 4 */
+    public static void countNum(){
+        //type cast as int because the returning datatypes is long
+        int count= (int) numbers.stream().filter(num -> ((num%2 == 0))&&(num%4==0)).count();
+        System.out.println("Number of Even and divided by 4 element present in the List is : "+count);
+    }
+
 
 
 
@@ -75,5 +82,6 @@ public class Stream {
         StreamFilter.qubeOddNumber();
         StreamFilter.squareEvenCubeOdd();
         StreamFilter.countOdd();
+        StreamFilter.countNum();
     }
 }
