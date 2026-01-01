@@ -18,17 +18,28 @@ class StreamFilter{
     /* find the employee whose name start with A */
 
     /* using filter and forEach */
+
+    private static List<Integer>numbers=Arrays.asList(1,2,3,4,5,6,7,8,9,10);
     public static void filterNameStartWith(){
         List<String>nameList= Arrays.asList("Ayan","Shreya","Sayan","Tony","Sumit","Arka","Akshay");
 
         nameList.stream().filter((s)->s.startsWith("A")).forEach(System.out::println);
     }
 
-    public static void squareEvenNumber(){
-        List<Integer>numbers=Arrays.asList(1,2,3,4,5,6,7,8,9,10);
 
+    /* square of all evenNumber*/
+    public static void squareEvenNumber(){
+        System.out.println("\tsquare of all evenNumber");
         numbers.stream().filter(n-> (n%2==0)).map(n -> n*n).forEach(System.out::println);
     }
+
+    /* qube of all OddNumber*/
+    public static void qubeOddNumber(){
+        System.out.println("\tqube of all OddNumber");
+        numbers.stream().filter(n -> ((n/2)*2)!=n).map(n -> n*n*n).forEach(System.out::println);
+    }
+
+
 
 
 
@@ -38,5 +49,6 @@ public class Stream {
     public static void main(String[] args) {
         StreamFilter.filterNameStartWith();
         StreamFilter.squareEvenNumber();
+        StreamFilter.qubeOddNumber();
     }
 }
