@@ -51,6 +51,12 @@ class StreamFilter{
     }
 
     /* count odd element */
+    public static void countOdd(){
+        //type cast as int because the returning datatypes is long
+        int count= (int) numbers.stream().filter(num -> (num%2 != 0)).count();
+        System.out.println("Number of odd element present in the List is : "+count);
+    }
+
 
 
 
@@ -68,5 +74,6 @@ public class Stream {
         StreamFilter.squareEvenNumber();
         StreamFilter.qubeOddNumber();
         StreamFilter.squareEvenCubeOdd();
+        StreamFilter.countOdd();
     }
 }
