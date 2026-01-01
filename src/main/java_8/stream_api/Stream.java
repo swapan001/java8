@@ -40,14 +40,19 @@ class StreamFilter{
         numbers.stream().filter(n -> ((n/2)*2)!=n).map(n -> n*n*n).forEach(System.out::println);
     }
 
+    /* even numbers square and odd numbers cube*/
     public static void squareEvenCubeOdd() {
-        System.out.println("Even numbers squared and odd numbers cubed");
+        System.out.println("Even numbers square and odd numbers cube");
         List<Integer>updatedList;
         updatedList = numbers.stream()
                 .map(n -> n % 2 == 0 ? n * n : n * n * n)
                 .collect(Collectors.toList());
         updatedList.forEach(System.out::println);
     }
+
+    /* count odd element */
+
+
 
 
 
