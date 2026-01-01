@@ -12,6 +12,7 @@ package main.java_8.stream_api;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 class StreamFilter{
 
@@ -39,6 +40,17 @@ class StreamFilter{
         numbers.stream().filter(n -> ((n/2)*2)!=n).map(n -> n*n*n).forEach(System.out::println);
     }
 
+    public static void squareEvenCubeOdd() {
+        System.out.println("Even numbers squared and odd numbers cubed");
+        List<Integer>updatedList;
+        updatedList = numbers.stream()
+                .map(n -> n % 2 == 0 ? n * n : n * n * n)
+                .collect(Collectors.toList());
+        updatedList.forEach(System.out::println);
+    }
+
+
+
 
 
 
@@ -50,5 +62,6 @@ public class Stream {
         StreamFilter.filterNameStartWith();
         StreamFilter.squareEvenNumber();
         StreamFilter.qubeOddNumber();
+        StreamFilter.squareEvenCubeOdd();
     }
 }
