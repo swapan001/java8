@@ -64,6 +64,16 @@ class StreamFilter{
         System.out.println("Number of Even and divided by 4 element present in the List is : "+count);
     }
 
+    /* convert all name to upperCase */
+    public static void convertStringUpperCase(){
+        System.out.println("convert all name to upperCase");
+        List<String>upperCaseString=Arrays.asList(
+                "Rohit","Sayan","Sahil","Minhaj","suRaJit","Priyanka","mouLIK"
+        ).stream().map(String::toUpperCase).collect(Collectors.toList());
+
+        upperCaseString.forEach(System.out::println);
+    }
+
 
 
 
@@ -83,5 +93,6 @@ public class Stream {
         StreamFilter.squareEvenCubeOdd();
         StreamFilter.countOdd();
         StreamFilter.countNum();
+        StreamFilter.convertStringUpperCase();
     }
 }
