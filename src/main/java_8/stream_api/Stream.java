@@ -31,13 +31,15 @@ class StreamFilter{
     /* square of all evenNumber*/
     public static void squareEvenNumber(){
         System.out.println("\tsquare of all evenNumber");
-        numbers.stream().filter(n-> (n%2==0)).map(n -> n*n).forEach(System.out::println);
+        numbers.stream().filter(n-> (n%2==0)).map(n -> n*n).forEach(num -> System.out.print(num+" "));
+        System.out.println();
     }
 
     /* qube of all OddNumber*/
     public static void qubeOddNumber(){
         System.out.println("\tqube of all OddNumber");
-        numbers.stream().filter(n -> ((n/2)*2)!=n).map(n -> n*n*n).forEach(System.out::println);
+        numbers.stream().filter(n -> ((n/2)*2)!=n).map(n -> n*n*n).forEach(num -> System.out.print(num+" "));
+        System.out.println();
     }
 
     /* even numbers square and odd numbers cube*/
@@ -47,7 +49,8 @@ class StreamFilter{
         updatedList = numbers.stream()
                 .map(n -> n % 2 == 0 ? n * n : n * n * n)
                 .collect(Collectors.toList());
-        updatedList.forEach(System.out::println);
+        updatedList.forEach(s -> System.out.print(s+" "));
+        System.out.println();
     }
 
     /* count odd element */
@@ -71,8 +74,27 @@ class StreamFilter{
                 "Rohit","Sayan","Sahil","Minhaj","suRaJit","Priyanka","mouLIK"
         ).stream().map(String::toUpperCase).collect(Collectors.toList());
 
-        upperCaseString.forEach(System.out::println);
+        upperCaseString.forEach(s -> System.out.print(s+" "));
+        System.out.println();
     }
+
+
+    /* sorting a list using lambdaExpression*/
+    public static void sortjngListUsingLambda(){
+        List<String>list=Arrays.asList("Ranjit","Subal","Krishna","Biswanath","Anupam","Shankar","Purna");
+        list.forEach(s -> System.out.print(s+" "));
+        System.out.println();
+        list.sort((s1,s2)->{
+            return s1.compareTo(s2);
+        });
+
+        list.forEach(s -> System.out.print(s+" "));
+    }
+
+
+
+
+
 
 
 
@@ -94,5 +116,7 @@ public class Stream {
         StreamFilter.countOdd();
         StreamFilter.countNum();
         StreamFilter.convertStringUpperCase();
+
+        StreamFilter.sortjngListUsingLambda();
     }
 }
